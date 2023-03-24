@@ -7,11 +7,11 @@ hamburgerDiv.addEventListener('click', () => {
     if (status === "open") {
         hamburgerDiv.setAttribute("status", "close");
         navBar.setAttribute("data-visible", "false");
-        document.querySelector("body").style.overflowY = "hidden";
+        document.querySelector("body").style.overflowY = "scroll";
     } else {
         hamburgerDiv.setAttribute("status", "open");
         navBar.setAttribute("data-visible", "true");
-        document.querySelector("body").style.overflowY = "scroll";
+        document.querySelector("body").style.overflowY = "hidden";
     }
 });
 
