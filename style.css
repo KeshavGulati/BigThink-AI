@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Poppins:wght@400;700&display=swap');
+
+/* <-- Custom Properties Start --> */
+
+:root {
+    
+  /* Font Sizes */
+  font-size: 16px;
+  --h1: 2.25rem;
+  --h2: 1.68rem;
+  --h3: 1.26rem;
+  --crimson-font: 1.26rem;
+
+  /* Font Family */
+  --poppins: 'Poppins', sans-serif;
+  --crimson-text: 'Crimson Text', serif;
+  
+  /* Colors */
+  --nav-footer-clr: #3EA5CE;
+  --join-us-clr: #7755FF;
+  --pyoneers-clr: #88E1E3;
+  --pyoneers-sub-clr: #D9D9D9;
+  --edge-clr: #32FCC7;
+  --info-join-heading-clr: #153745;
+
+}
+
+/* <-- Custom Properties End --> */
+
+/* <-- Reset Start --> */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  /* My additions */
+  overflow-x: hidden;
+  font-family: var(--poppins);
+}
+
+/* Remove default styles for list elements and anchor tags */
+ul,li,
+a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* <-- Reset End --> */
+
+/* <-- Utility Classes Start --> */
+
+.flex {
+
+  display: flex;
+  gap: var(--gap, 1rem);
+
+}
+
+/* <-- Utility Classes End --> */
+
+/* <-- Navigation Start --> */
+
+.nav {
+
+  padding: 1em 3em;
+  background: var(--nav-footer-clr);
+  align-items: center;
+  justify-content: space-between;
+  height: 8rem;
+
+}
+
+.nav__nav-items {
+
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+  width: 100vw;
+  transition: transform 350ms ease-in-out;
+
+}
+
+.logo {
+
+  height: 3.5rem;
+  width: 3.75rem;
+
+}
+
+.hamburger-div {
+  
+  z-index: 100;
+
+}
+
+.hamburger-svg > rect:nth-child(n) {
+
+  transition: 0.5s;
+  transform-origin: center;
+
+}
+
+.hamburger-div[status="open"] .top {
+
+  y: 45;
+  rotate: -45deg;
+
+}
+
+.hamburger-div[status="open"] .middle {
+
+  rotate: -45deg;
+
+}
+
+.hamburger-div[status="open"] .bottom {
+
+  y: 45;
+  rotate: 45deg;
+
+}
+
+.nav__nav-items[data-visible = 'false'] {
+
+  transform: translateX(100%);
+
+}
+
+.nav__nav-items[data-visible = 'true'] {
+
+  transform: translateX(-100%);
+
+}
+
+/* <-- Navigation End --> */
+
+/* <-- Hero Section Start --> */
+
+.hero-section {
+
+  padding-bottom: 2em;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+}
+
+.hero-section__div {
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+
+.hero-section__div > * {
+
+  margin: 0.5rem;
+
+}
+
+.hero-img {
+
+  margin: 0;
+  min-width: 100%;
+
+}
+
+.hero-heading {
+
+  font-size: var(--h1);
+  text-align: center;
+  margin-top: 1rem;
+
+}
+
+.hero-subheading {
+
+  font-size: var(--h3);
+  font-weight: 400;
+  text-align: center;
+  max-width: 70%;
+
+}
+
+.hero-section__join-us-btn {
+
+  font-size: var(--h3);
+  font-weight: bold;
+  background: var(--join-us-clr);
+  color: #fff;
+  padding: 0.3rem 1.2rem;
+  border-radius: 1.5rem;
+
+}
+
+/* <-- Hero Section End --> */
+
+/* <-- Info Section Start --> */
+
+.info-section {
+
+  flex-direction: column;
+  --gap: 0;
+
+}
+
+.info-section__h2 {
+
+  color: var(--info-join-heading-clr);
+
+}
+
+.info-section p {
+
+  font-family: var(--crimson-text);
+  font-size: var(--crimson-font);
+
+}
+
+.pyoneers-div {
+
+  background: var(--pyoneers-clr);
+  padding: 5em;
+
+}
+
+.pyoneers-div__sub-div {
+
+  padding: 0;  
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.pyoneers-div__sub-div > div {
+
+  padding: 2.5em 5em;
+  background: var(--pyoneers-sub-clr);
+  border: 5px solid black;
+
+}
+
+.pyoneers-div__sub-div h3 {
+
+  font-size: var(--h2);
+
+}
+
+.edge-div {
+
+  padding: 5em;
+  background: var(--edge-clr);
+
+}
+
+/* <-- Info Section End --> */
+
+/* <-- Join Us Section Start --> */
+
+.join-us-section {
+
+  padding: 5em;
+
+}
+
+.join-us-h2 {
+
+  color: var(--info-join-heading-clr);
+  font-size: var(--h2);
+
+}
+
+.join-us-section__p {
+
+  max-width: 70%;
+
+}
+
+/* <-- Join Us Section End --> */
+
+/* <-- Footer Start --> */
+
+.footer {
+
+  padding: 5em 2em;
+  background: var(--nav-footer-clr);
+
+}
+
+.contact-us,
+.terplink {
+
+  font-weight: bold;
+
+}
+
+.footer-icons {
+
+  display: flex;
+
+}
+
+.footer-icons > li {
+
+  margin: 0.3rem;
+
+}
+
+.footer__terplink {
+
+  word-wrap: break-word;
+
+}
+
+/* <-- Footer End --> */
+
+/* <-- Mobile Nav Bar Start --> */
+
+
+
+/* <-- Mobile Nav Bar End --> */
+
+/* <-- Desktop Version Start --> */
+
+@media (min-width: 1200px) {
+
+  :root {
+
+    font-size: 20.25px;
+    --hero-heading-size: 4.21rem;
+    --hero-subheading-size: 1.3rem;
+    --pyoneers-child-heading-size: 2rem;
+    --info-heading-size: 3.16rem;
+
+  }
+
+  body {
+
+    font-size: 1rem;
+    overflow-x: hidden;
+
+  }
+  
+  /* <--- Mavigation Start ---> */
+  
+  .hamburger-div {
+
+    display: none;
+
+  }
+
+  .nav {
+
+    height: 110px;
+    padding-left: 8em;
+    padding-right: 25em;
+    /* border: 2px solid red; */
+
+  }
+
+  .nav__nav-items {
+
+    position: relative;
+    top: auto;
+    left: auto;
+    background: transparent;
+    padding: auto;
+    margin: auto;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    /* border: 2px solid blue; */
+
+  }
+
+  .nav__nav-items__a {
+
+    font-weight: bold;
+    color: #fff;
+
+  }
+
+  .join-us-btn {
+
+    background-color: var(--join-us-clr);
+    border-radius: 50px;
+    padding: 0.3rem 1.3em;
+
+  }
+
+  /* <--- Navigation End ---> */
+
+  /* <--- Hero Section Start ---> */
+
+  .hero-img {
+
+    height: inherit;
+    object-fit: cover;
+    z-index: 9;
+    opacity: 50%;
+
+  }
+  
+  .overlay {
+
+    background-color: #000;
+    z-index: 10;
+    width: 100%;
+    height: 22rem;
+    opacity: 80%;
+
+  }
+
+  .hero-section__div {
+
+    position: absolute;
+
+  }
+
+  .hero-heading,
+  .hero-section__join-us-btn {
+
+    color: #fff;
+    z-index: 999;
+
+  }
+
+  .hero-heading {
+
+    font-size: var(--hero-heading-size);
+
+  }
+
+  .hero-subheading {
+
+    font-size: var(--hero-subheading-size);
+    color: #ddd;
+    z-index: 999;
+
+  }
+
+  .hero-section {
+
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  /* <--- Hero Section End ---> */
+
+  /* <--- Info Section Start ---> */
+
+  .info-section__h2 {
+
+    font-size: var(--info-heading-size);
+
+  }
+  
+  .info-section__div {
+
+    padding: 4em 14em;
+
+  }
+
+  .info-section__div:nth-child(2) {
+
+    padding: 0;
+    flex-direction: row;
+
+  }
+
+  .info-section__div > div {
+
+    padding: 2em;
+
+  }
+
+  .info-section__div > div > h3 {
+
+    font-size: var(--pyoneers-child-heading-size);
+
+  }
+
+  .join-us-section {
+
+    padding: 5em;
+
+  }
+
+  .join-us-h2 {
+
+    font-size: 3rem;
+    padding-bottom: 0.5em;
+
+  }
+
+  .join-us-section__p {
+
+    font-size: 1rem;
+
+  }
+
+  /* <--- Info Section End ---> */
+
+  /* <--- Footer Start ---> */
+
+  .footer {
+
+    font-size: 1rem;
+
+  }
+
+  .footer > i {
+
+    size: 1rem;
+
+  }
+
+  /* <--- Footer End ---> */
+
+}
+
+/* <-- Desktop Version End --> */
