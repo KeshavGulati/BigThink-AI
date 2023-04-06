@@ -7,11 +7,11 @@ hamburgerDiv.addEventListener('click', () => {
     if (status === "open") {
         hamburgerDiv.setAttribute("status", "close");
         navBar.setAttribute("data-visible", "false");
-        document.querySelector("body").style.overflowY = "scroll";
+        document.body.style.overflowY = "scroll";
     } else {
         hamburgerDiv.setAttribute("status", "open");
         navBar.setAttribute("data-visible", "true");
-        document.querySelector("body").style.overflowY = "hidden";
+        document.body.style.overflowY = "hidden";
     }
 });
 
@@ -21,5 +21,6 @@ navLinks.forEach(link => {
         hamburgerDiv.setAttribute("status", "close");
         navBar.setAttribute("data-visible", "false");
         document.getElementById(href).scrollIntoView();
+        document.body.style.overflowY = "scroll";
     });
 });
