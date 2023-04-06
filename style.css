@@ -602,11 +602,18 @@ select {
 
   }
 
-  .footer > i {
+  .footer-icons__icon {
 
-    size: 1rem;
+    transition: 0.2s ease-in;
 
   }
+
+  .footer-icons__icon:hover {
+
+    transform: translateY(-5px);
+
+  }
+
 
   /* <--- Footer End ---> */
 
