@@ -300,16 +300,21 @@ select {
 .pyoneers-div__sub-div {
 
   padding: 0;  
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 
 }
 
 .pyoneers-div__sub-div > div {
 
+  /* overflow-x: visible;
+  width: 100%; */
   padding: 2.5em 5em;
   background: var(--pyoneers-sub-clr);
   border: 5px solid black;
+  /* Hardcoded (T_T) */
+  /* min-width: 96vw;
+  min-height: 20rem; */
 
 }
 
@@ -325,6 +330,12 @@ select {
   background: var(--edge-clr);
 
 }
+
+/* body {
+
+  overflow-x: scroll;
+
+} */
 
 /* <-- Info Section End --> */
 
@@ -553,6 +564,22 @@ select {
     font-size: var(--pyoneers-child-heading-size);
 
   }
+/* 
+  .pyoneers-div__sub-div {
+
+    width: auto;
+
+  }
+
+  .pyoneers-div__sub-div > div {
+
+    overflow-x: hidden;
+    width: auto;
+    min-width: auto;
+    min-height: auto;
+    height: 100%;
+
+  } */
 
   .join-us-section {
 
