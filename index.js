@@ -1,6 +1,37 @@
 const hamburgerDiv = document.querySelector(".hamburger-div");
 const navBar = document.querySelector(".nav__nav-items");
 const navLinks = document.querySelectorAll(".nav__nav-items__a");
+const pyoneersDiv = document.querySelector(".pyoneers-div");
+const edgeDiv = document.querySelector(".edge-div");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // entry.target.classList.add("pyoneers-div-animation");
+            // console.log("Intersecting");
+            pyoneersDiv.style.transform = "translateX(0%)";
+        }
+    })
+})
+
+observer.observe(pyoneersDiv);
+
+const observer2 = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // entry.target.classList.add("pyoneers-div-animation");
+            // console.log("Intersecting");
+            edgeDiv.style.transform = "translateX(0%)";
+        }
+    })
+})
+
+observer2.observe(edgeDiv);
+
+// const observeList = document.querySelectorAll(".observe-div");
+// observeList.forEach((el) => {
+//     observer.observe(el)
+// })
 
 hamburgerDiv.addEventListener('click', () => {
     const status = hamburgerDiv.getAttribute("status");
