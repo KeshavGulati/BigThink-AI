@@ -432,24 +432,29 @@ select {
 
   .nav {
 
+    /* position: fixed; */
     height: 110px;
     padding-left: 8em;
     padding-right: 25em;
     /* border: 2px solid red; */
+    /* z-index: 10000; */
 
   }
 
   .nav__nav-items {
 
+    /* position: fixed; */
     position: relative;
     top: auto;
     left: auto;
     background: transparent;
+    /* background: var(--new-nav-clr); */
     padding: auto;
     margin: auto;
     flex-direction: row;
     height: auto;
     width: auto;
+    /* z-index: 10000; */
     /* border: 2px solid blue; */
 
   }
