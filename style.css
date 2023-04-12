@@ -6,7 +6,8 @@
     
   /* Font Sizes */
   font-size: 16px;
-  --h1: 2.25rem;
+  /* --h1: 2.25rem; */
+  --h1: 3rem;
   --h2: 1.68rem;
   --h3: 1.26rem;
   --crimson-font: 1.26rem;
@@ -242,7 +243,7 @@ select {
 
   font-size: var(--h1);
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 4rem;
 
 }
 
@@ -296,8 +297,9 @@ select {
   background: var(--pyoneers-clr);
   padding: 5em;
   transform: translateX(-90%);
+  margin-top: 1rem;
   /* top: 50em; */
-  transition: ease-in 1s;
+  transition: ease-in 1.5s;
 
 }
 
@@ -549,6 +551,7 @@ select {
   .hero-heading {
 
     font-size: var(--hero-heading-size);
+    margin: 1rem;
 
   }
 
@@ -611,6 +614,13 @@ select {
   .info-section__div > div > h3 {
 
     font-size: var(--pyoneers-child-heading-size);
+
+  }
+
+  .pyoneers-div {
+
+    margin-top: auto;
+    transition: ease-in 1s;
 
   }
 
