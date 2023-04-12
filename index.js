@@ -3,6 +3,9 @@ const navBar = document.querySelector(".nav__nav-items");
 const navLinks = document.querySelectorAll(".nav__nav-items__a");
 const pyoneersDiv = document.querySelector(".pyoneers-div");
 const edgeDiv = document.querySelector(".edge-div");
+// const pyoneersSubDiv = document.querySelectorAll(".pyoneers-div__sub-div > div")
+
+// Can add animations for borders of pyoneers' subdiv
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {

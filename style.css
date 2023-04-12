@@ -171,6 +171,8 @@ select {
 
 .hamburger-svg > rect:nth-child(n) {
 
+  /* fill: #008BC4; */
+  fill: #00b7ff;
   transition: 0.5s;
   transform-origin: center;
 
@@ -313,14 +315,24 @@ select {
   right: 0;
   flex: 1;
   padding: 2.5em 5em;
-  background: var(--pyoneers-sub-clr);
-  border: 5px solid black;
+  /* background: var(--pyoneers-sub-clr); */
+  background: var(--new-nav-clr);
+  color: #ddd;
+  /* font-family: var(--crimson-font); */
+  border: 5px solid #ddd;
 
 }
 
 .pyoneers-div__sub-div h3 {
 
   font-size: var(--h2);
+
+}
+
+.pyoneers-div__sub-div > div > p {
+
+  font-size: 1rem;
+  font-family: var(--poppins);
 
 }
 
@@ -368,6 +380,12 @@ select {
 
 }
 
+.footer * {
+
+  color: #fff;
+
+}
+
 .contact-us,
 .terplink {
 
@@ -389,7 +407,15 @@ select {
 
 .footer__terplink {
 
+  color: #aaa;
   word-wrap: break-word;
+  transition: ease-in 0.2s;
+
+}
+
+.footer__terplink:hover {
+
+  color: #fff;
 
 }
 
@@ -438,6 +464,7 @@ select {
     padding-right: 25em;
     /* border: 2px solid red; */
     /* z-index: 10000; */
+    /* z-index: 99999999; */
 
   }
 
@@ -454,7 +481,6 @@ select {
     flex-direction: row;
     height: auto;
     width: auto;
-    /* z-index: 10000; */
     /* border: 2px solid blue; */
 
   }
