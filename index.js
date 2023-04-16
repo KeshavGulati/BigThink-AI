@@ -66,6 +66,7 @@ navLinks.forEach(link => {
 setInterval(() => {
     // console.log(dsDiv.getAttribute("status"));
     if (window.innerWidth > 1200) {
+        pyoneersSubDiv.style.transform = "translateX(0vw)";
         return;
     }
     if (aiDiv.getAttribute("status") == "active") {
