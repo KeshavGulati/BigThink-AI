@@ -7,16 +7,8 @@
 I would encourage everyone to view the website on different devices to test how responsive it is.
 
 ## Issues
-- Hero section does not exactly look like the design; has different positioning and hero image has a slightly different color.
-- Scroll does not hide when nav bar is open for mobile view.
 - Hamburger behaves differently for similar screen sizes on different devices.
 
 ## Yet To Do
-- Adding descriptions for the different sections within Pyoneers.
-- Filling up email in footer.
-- Filling up phone in footer.
-- *Considering* changing pyoneers subdivs to be a slideshow for mobile view.
 - *Considering* adding more content for EDGE section.
 - *Considering* adding an 'Our Team' section or page.
-- *Considering* removing phone option entirely from the footer.
-- *Considering* replacing hero image.
