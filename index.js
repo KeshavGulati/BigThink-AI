@@ -66,7 +66,6 @@ navLinks.forEach(link => {
 setInterval(() => {
     // console.log(dsDiv.getAttribute("status"));
     if (window.innerWidth > 1200) {
-        pyoneersSubDiv.style.transform = "translateX(0vw)";
         return;
     }
     if (aiDiv.getAttribute("status") == "active") {
@@ -82,4 +81,10 @@ setInterval(() => {
         pythonDiv.setAttribute("status", "inactive");
         aiDiv.setAttribute("status", "active");
     }
-}, 2500);
+}, 7000);
+
+setInterval (() => {
+    if (window.innerWidth > 1200) {
+        pyoneersSubDiv.style.transform = "translateX(0vw)";
+    }
+}, 1);
