@@ -364,7 +364,7 @@ select {
 
 .join-us-section__p {
 
-  max-width: 70%;
+  max-width: max(500px, 70%)
 
 }
 
