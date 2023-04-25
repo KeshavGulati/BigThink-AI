@@ -144,7 +144,7 @@ select {
 
   position: absolute;
   top: 0;
-  left: 100%;
+  /* left: 100%; */
   background-color: white;
   padding: 0;
   margin: 0;
@@ -207,7 +207,8 @@ select {
 
 .nav__nav-items[data-visible = 'true'] {
 
-  transform: translateX(-100%);
+  transform: translateX(0);
+  right: 0;
 
 }
 
@@ -419,6 +420,12 @@ select {
 }
 
 /* <-- Footer End --> */
+
+body {
+
+  overflow-x: hidden;
+
+}
 
 /* <-- Mobile Nav Bar Start --> */
 
