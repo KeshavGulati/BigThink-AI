@@ -1,6 +1,6 @@
 # **BigTh!nk AI**
 ## Useful Links:
-- Live Website: https://keshavgulati.github.io/BigThink-AI/
+- Live Website: https://bigthinkaiumd.github.io/BigThink-AI/
 - [Original Design](https://www.figma.com/file/OOuXzx7zdQSjvp2CizgwBq/BigThink-AI-2?node-id=0%3A1&t=3UpdYdM8On3hwg82-1)
 
 ## Testing
