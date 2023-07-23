@@ -49,7 +49,7 @@ hamburgerDiv.addEventListener('click', () => {
         setTimeout(() => {navBar.style.display = "none"}, 350);
     } else {
         hamburgerDiv.setAttribute("status", "open");
-        navBar.style.display = "";
+        navBar.style.display = "flex";
         setTimeout(() => {navBar.setAttribute("data-visible", "true");}, 1);
         document.body.style.overflowY = "hidden";
     }
@@ -60,7 +60,10 @@ navLinks.forEach(link => {
         const href = link.getAttribute("href");
         hamburgerDiv.setAttribute("status", "close");
         navBar.setAttribute("data-visible", "false");
-        document.getElementById(href).scrollIntoView();
+        setTimeout(() => {
+            navBar.style.display = "none";
+            document.getElementById(href).scrollIntoView();
+        }, 350);
         document.body.style.overflowY = "scroll";
     });
 });

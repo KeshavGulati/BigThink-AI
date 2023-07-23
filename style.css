@@ -148,9 +148,9 @@ body {
 
 .nav__nav-items {
 
+  display: none; /* To prevent overflow at page load */
   position: absolute;
   top: 0;
-  /* left: 100%; */
   background-color: white;
   padding: 0;
   margin: 0;
@@ -178,7 +178,7 @@ body {
 
 }
 
-.hamburger-svg > rect:nth-child(n) {
+.hamburger-svg > rect {
 
   /* fill: #008BC4; */
   fill: #00b7ff;
