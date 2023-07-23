@@ -46,9 +46,11 @@ hamburgerDiv.addEventListener('click', () => {
         hamburgerDiv.setAttribute("status", "close");
         navBar.setAttribute("data-visible", "false");
         document.body.style.overflowY = "scroll";
+        setTimeout(() => {navBar.style.display = "none"}, 350);
     } else {
         hamburgerDiv.setAttribute("status", "open");
-        navBar.setAttribute("data-visible", "true");
+        navBar.style.display = "";
+        setTimeout(() => {navBar.setAttribute("data-visible", "true");}, 1);
         document.body.style.overflowY = "hidden";
     }
 });

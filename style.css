@@ -116,6 +116,12 @@ select {
 
 /* <-- Reset End --> */
 
+html,
+body {
+  height: 100%;
+
+}
+
 /* <-- Utility Classes Start --> */
 
 .flex {
@@ -151,9 +157,11 @@ select {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   transition: transform 350ms ease-in-out;
+  overflow-x: hidden;
+  z-index: 100;
 
 }
 
@@ -276,6 +284,8 @@ select {
 
   flex-direction: column;
   --gap: 0;
+  z-index: 99;
+  overflow-x: hidden;
 
 }
 
