@@ -189,7 +189,7 @@ body {
 
 .hamburger-div[status="open"] .top {
 
-  y: 45;
+  /* y: 45; */
   rotate: -45deg;
 
 }
@@ -202,7 +202,7 @@ body {
 
 .hamburger-div[status="open"] .bottom {
 
-  y: 45;
+  /* y: 45; */
   rotate: 45deg;
 
 }

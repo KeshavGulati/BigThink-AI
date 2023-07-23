@@ -1,4 +1,7 @@
 const hamburgerDiv = document.querySelector(".hamburger-div");
+const hamburgerTop = document.querySelector(".top");
+const hamburgerMiddle = document.querySelector(".middle");
+const hamburgerBottom = document.querySelector(".bottom");
 const navBar = document.querySelector(".nav__nav-items");
 const navLinks = document.querySelectorAll(".nav__nav-items__a");
 const pyoneersDiv = document.querySelector(".pyoneers-div");
@@ -10,6 +13,26 @@ const pyoneersSubDiv = document.querySelector(".pyoneers-div__sub-div");
 // const pyoneersSubDiv = document.querySelectorAll(".pyoneers-div__sub-div > div")
 
 // Can add animations for borders of pyoneers' subdiv
+
+function openHamburger() {
+    hamburgerTop.setAttribute("y", "45");
+    hamburgerMiddle.setAttribute("y", "45");
+    hamburgerBottom.setAttribute("y", "45");
+    setTimeout(() => {
+        hamburgerDiv.setAttribute("status", "open");
+    }, 500);
+
+}
+
+function closeHamburger() {
+    hamburgerDiv.setAttribute("status", "close");
+    setTimeout(() => {
+        hamburgerTop.setAttribute("y", "25");
+        hamburgerMiddle.setAttribute("y", "45");
+        hamburgerBottom.setAttribute("y", "65");
+    }, 500);
+
+}
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -43,12 +66,12 @@ observer2.observe(edgeDiv);
 hamburgerDiv.addEventListener('click', () => {
     const status = hamburgerDiv.getAttribute("status");
     if (status === "open") {
-        hamburgerDiv.setAttribute("status", "close");
+        closeHamburger();
         navBar.setAttribute("data-visible", "false");
         document.body.style.overflowY = "scroll";
         setTimeout(() => {navBar.style.display = "none"}, 350);
     } else {
-        hamburgerDiv.setAttribute("status", "open");
+        openHamburger();
         navBar.style.display = "flex";
         setTimeout(() => {navBar.setAttribute("data-visible", "true");}, 1);
         document.body.style.overflowY = "hidden";
@@ -57,8 +80,8 @@ hamburgerDiv.addEventListener('click', () => {
 
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        const href = link.getAttribute("href");
-        hamburgerDiv.setAttribute("status", "close");
+        let href = link.getAttribute("href");
+        closeHamburger();
         navBar.setAttribute("data-visible", "false");
         setTimeout(() => {
             navBar.style.display = "none";
@@ -69,7 +92,6 @@ navLinks.forEach(link => {
 });
 
 setInterval(() => {
-    // console.log(dsDiv.getAttribute("status"));
     if (window.innerWidth > 1200) {
         return;
     }
