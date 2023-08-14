@@ -7,9 +7,7 @@
 I would encourage everyone to view the website on different devices to test how responsive it is.
 
 ## Issues
-- Hero section does not exactly look like the design; has different positioning and hero image has a slightly different color.
-- Scroll does not hide when nav bar is open for mobile view.
-- Hamburger behaves differently for similar screen sizes on different devices.
+All resolved
 
 ## Yet To Do
 - *Considering* adding an 'Our Team' section or page.
