@@ -12,5 +12,3 @@ All resolved
 
 ## Yet To Do
 - *Considering* adding an 'Our Team' section or page.
-- *Considering* removing phone option entirely from the footer.
-- *Considering* replacing hero image.
