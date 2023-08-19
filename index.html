@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="index.js" defer></script>
@@ -13,7 +14,9 @@
 <body>
     <header class="header">
         <nav class="nav flex">
-            <img class="logo" src="images/logo.png" alt="Logo of the club">
+            <a href="#hero-section" class="logo-a">
+                <img class="logo" src="images/logo.png" alt="Logo of the club">
+            </a>
             <ul class="nav__nav-items flex" data-visible="false">
                 <li class="nav__nav-items__li" data-visible="false">
                     <a href="#hero-section" class="nav__nav-items__a">
@@ -59,7 +62,7 @@
 
     <section class="hero-section flex" id="hero-section"> 
         <div class="overlay">
-            <img class="hero-img" src="images/BigThink 1.png" alt="Group picture of all club memebers">
+            <!-- <img class="hero-img" src="images/BigThink 1.png" alt="Group picture of all club memebers"> -->
         </div>
         <div class="hero-section__div flex">
             <h1 class="hero-heading">Big Th!nk AI</h1>
@@ -74,7 +77,7 @@
     </section>
 
     <section class="info-section flex" id="#info">
-        <div class="info-section__div pyoneers-div">
+        <div class="info-section__div pyoneers-div observe-div">
             <h2 class="info-section__h2 pyoneers-h2">
                 Pyoneers
             </h2>
@@ -83,31 +86,31 @@
             </p>
         </div>
         <div class="info-section__div pyoneers-div__sub-div flex">
-            <div class="AI-div">
+            <div class="AI-div" status="active">
                 <h3 class="AI-div__h3">AI</h3>
                 <p class="AI-div__p">
                     We teach you how to use supervised machine learning models and measure performance metrics from them. Some machine learning models we’ve covered in the past include decision trees/random forests, neural networks, logistic regression, etc.
                 </p>
             </div>
-            <div class="DS-div">
+            <div class="DS-div" status="inactive">
                 <h3 class="DS-div__h3">Data Science</h3>
                 <p class="DS-div__p">
                     We teach you about the pipeline of cleaning raw data, performing exploratory data analysis and feature engineering so the data is ready for the model.
                 </p>
             </div>
-            <div class="Python-div">
+            <div class="Python-div" status="inactive">
                 <h3 class="Python-div__h3">Python</h3>
                 <p class="Python-div__p">
                     We teach you the basics of python programming from scratch! Some fundamental topics include loops, functions, lists, conditionals, etc
                 </p>
             </div>
         </div>
-        <div class="info-section__div edge-div">
+        <div class="info-section__div edge-div observe-div">
             <h2 class="info-section__h2 edge-h2">
                 EDGE
             </h2>
             <p class="info-section__p edge-div__p">
-                A recent addition to the club. In edge, we will be taking up cutting ‘EDGE’ topics, research, and problems in AI and work with them.
+                EDGE is a group of hardworking, knowledgeable, and passionate students that conduct a self-guided research project on AI. We begin the semester by looking at literature in AI and formulating ideas on potential projects. From there, we discuss research projects of interest as a group and decide on one or two to pursue. Throughout the semester, we write code, establish research questions, and execute the project. The goal is to produce a research paper by the end of the year!
             </p>
         </div>
     </section>
